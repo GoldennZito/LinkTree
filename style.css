@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'REM' sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: center url("./images/mar.jpg");
+    backdrop-filter: blur(10px);
+}
+
+#card{
+    background: white;
+    text-align: center;
+    width: 300px;
+    box-shadow: 5px 5px 20px #00000022;
+    border-radius: 16px;
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    gap: 20px;
+}
+
+#card header{
+    position: relative;
+    grid-row: 1/2;
+}
+
+#card main{
+    grid-row: 2/3;
+    margin-top: 40px;
+    padding: 0px 36px;
+}
+
+#card footer{
+    grid-row: 3/4;
+}
+
+#card header .background{
+    object-fit: cover;
+    height: 100%;
+    border-radius: 16px 16px 0 0;
+}
+
+#card header .avatar{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 5px solid aqua;
+}
+
+#card main ul{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#card main ul li a{
+    background: hsl(188, 85%, 50%);
+    color: hsl(240, 52%, 53%);
+    display: block;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+#card main ul li a:hover{
+    background: hsl(188, 85%, 30%);
+    color: hsl(240, 52%, 73%);
+    transition: 0.5s;
+}
